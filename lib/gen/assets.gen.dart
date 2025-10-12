@@ -51,10 +51,44 @@ class $AssetsIconsGen {
   ];
 }
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/forget_pass.png
+  AssetGenImage get forgetPass =>
+      const AssetGenImage('assets/images/forget_pass.png');
+
+  /// File path: assets/images/intro_being_creative.png
+  AssetGenImage get introBeingCreative =>
+      const AssetGenImage('assets/images/intro_being_creative.png');
+
+  /// File path: assets/images/intro_hot-trending.png
+  AssetGenImage get introHotTrending =>
+      const AssetGenImage('assets/images/intro_hot-trending.png');
+
+  /// File path: assets/images/intro_manager_desk.png
+  AssetGenImage get introManagerDesk =>
+      const AssetGenImage('assets/images/intro_manager_desk.png');
+
+  /// File path: assets/images/intro_social.png
+  AssetGenImage get introSocial =>
+      const AssetGenImage('assets/images/intro_social.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [
+    forgetPass,
+    introBeingCreative,
+    introHotTrending,
+    introManagerDesk,
+    introSocial,
+  ];
+}
+
 class Assets {
   const Assets._();
 
   static const $AssetsIconsGen icons = $AssetsIconsGen();
+  static const $AssetsImagesGen images = $AssetsImagesGen();
 }
 
 class AssetGenImage {
