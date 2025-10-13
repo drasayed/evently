@@ -1,4 +1,4 @@
-import 'package:evently/common/theme/app_colors.dart';
+import 'app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -6,10 +6,15 @@ class AppTheme {
     scaffoldBackgroundColor: AppColors.lightBGColor,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
     textTheme: _getTextTheme(AppColors.lightTextColor),
+    hintColor: AppColors.grey,
+    splashColor: AppColors.grey,
   );
-  static ThemeData darkTheme = ThemeData(scaffoldBackgroundColor: AppColors.darkBGColor,
+  static ThemeData darkTheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.darkBGColor,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
     textTheme: _getTextTheme(AppColors.darkTextColor),
+    hintColor: AppColors.darkTextColor,
+    splashColor: AppColors.mainColor,
   );
 
   static _getTextTheme(Color textColor) {
