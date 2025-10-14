@@ -11,20 +11,50 @@ class LogInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Assets.images.appIcon.image(height: 140),
-            Text(
-              'Evently',
-              style: TextStyle(
-                color: AppColors.mainColor,
-                fontSize: 36,
-                fontFamily: "Jockey One",
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Assets.images.appIcon.image(height: 140),
+              Text(
+                'Evently',
+                style: TextStyle(
+                  color: AppColors.mainColor,
+                  fontSize: 36,
+                  fontFamily: "Jockey One",
+                ),
               ),
-            ),
-            CustomTextField(hintText: 'Email',prefixIcon:Assets.icons.email.svg())//TODO Local
-          ],
+              SizedBox(height: 24),
+              CustomTextField(
+                hintText: 'Email',
+                prefixIcon: Assets.icons.email.svg(),
+              ), //TODO Local
+              SizedBox(height: 16),
+              CustomTextField(
+                hintText: 'Password',
+                prefixIcon: Assets.icons.lock.svg(),
+                suffixIcon: Assets.icons.eye.svg(),
+              ),
+              SizedBox(height: 16),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("Forget Password?",style: TextStyle(
+                      color: AppColors.mainColor,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      decoration: TextDecoration.underline,
+                      decorationColor: AppColors.mainColor
+                    ),),
+                  ),
+                ],
+              ), //TODO Local
+            ],
+          ),
         ),
       ),
     );

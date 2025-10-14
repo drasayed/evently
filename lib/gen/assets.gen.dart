@@ -26,6 +26,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/en_icon.png
   AssetGenImage get enIcon => const AssetGenImage('assets/icons/en_icon.png');
 
+  /// File path: assets/icons/eye.svg
+  SvgGenImage get eye => const SvgGenImage('assets/icons/eye.svg');
+
   /// File path: assets/icons/google_icon.png
   AssetGenImage get googleIcon =>
       const AssetGenImage('assets/icons/google_icon.png');
@@ -41,6 +44,7 @@ class $AssetsIconsGen {
     arIcon,
     email,
     enIcon,
+    eye,
     googleIcon,
     lock,
     nameIcon,
