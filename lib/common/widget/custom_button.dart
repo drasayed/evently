@@ -10,7 +10,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FilledButton(onPressed: onPressed, 
-    style: FilledButton.styleFrom(backgroundColor: AppColors.mainColor,shape:),
+    style: FilledButton.styleFrom(backgroundColor: AppColors.mainColor,shape: RoundedRectangleBorder(borderRadius: BorderRadiusGeometry.circular(16))),
     child: Text(title,style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500,color: Colors.white),)
     );
     
