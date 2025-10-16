@@ -1,11 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import '../common/widget/custom_main_button.dart';
-import '../common/widget/custom_outlined_button.dart';
-
-import '../common/theme/app_colors.dart';
-import '../common/widget/custom_text_form_field.dart';
-import '../gen/assets.gen.dart';
+import '../../common/widget/custom_main_button.dart';
+import '../../common/theme/app_colors.dart';
+import '../../common/widget/custom_text_form_field.dart';
+import '../../gen/assets.gen.dart';
 
 class SignUpScreen extends StatelessWidget {
   static const routeName = "/SignUpScreen";
@@ -14,6 +12,12 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Register'),
+        centerTitle: true,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        foregroundColor: AppColors.mainColor,
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -23,7 +27,7 @@ class SignUpScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Assets.images.appIcon.image(height: 140),
+                  Assets.images.appIcon.image(height: 130),
                   Text(
                     'Evently',
                     style: TextStyle(
@@ -37,7 +41,7 @@ class SignUpScreen extends StatelessWidget {
                     hintText: 'Name',
                     prefixIcon: Assets.icons.nameIcon.svg(),
                   ), //TODO Local
-                                    SizedBox(height: 16),
+                  SizedBox(height: 16),
 
                   CustomTextFormField(
                     hintText: 'Email',
@@ -48,24 +52,20 @@ class SignUpScreen extends StatelessWidget {
                     hintText: 'Password',
                     prefixIcon: Assets.icons.lock.svg(),
                     suffixIcon: Assets.icons.eye.svg(),
-                  ),//TODO Local
+                  ), //TODO Local
                   SizedBox(height: 16),
 
-                  
                   CustomTextFormField(
                     hintText: 'Re Password',
                     prefixIcon: Assets.icons.lock.svg(),
                     suffixIcon: Assets.icons.eye.svg(),
-                  ),//TODO Local
+                  ), //TODO Local
 
                   SizedBox(height: 8),
                   SizedBox(height: 16),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CustomButton(title: 'Create Account', onPressed: () {}),
-                      ),//TODO Local
-                    ],
+                  CustomButton(
+                    title: 'Create Account',
+                    onPressed: () {},
                   ),
                   SizedBox(height: 24),
                   Text.rich(
@@ -74,12 +74,13 @@ class SignUpScreen extends StatelessWidget {
                         TextSpan(
                           text: 'Already Have Account ? ',
                           style: Theme.of(context).textTheme.titleMedium,
-                        ),//TODO Local
+                        ), //TODO Local
                         TextSpan(
                           text: ' Login',
-                          recognizer:TapGestureRecognizer()..onTap=(){
-                            Navigator.of(context).pop();
-                          },
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.of(context).pop();
+                            },
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -93,8 +94,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-                  
-                  
+
                   SizedBox(height: 24),
 
                   Transform.scale(

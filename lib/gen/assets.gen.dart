@@ -58,9 +58,9 @@ class $AssetsImagesGen {
   AssetGenImage get appIcon =>
       const AssetGenImage('assets/images/app_icon.png');
 
-  /// File path: assets/images/forget_pass.png
-  AssetGenImage get forgetPass =>
-      const AssetGenImage('assets/images/forget_pass.png');
+  /// File path: assets/images/forget_password.png
+  AssetGenImage get forgetPassword =>
+      const AssetGenImage('assets/images/forget_password.png');
 
   /// File path: assets/images/intro_being_creative.png
   AssetGenImage get introBeingCreative =>
@@ -81,7 +81,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     appIcon,
-    forgetPass,
+    forgetPassword,
     introBeingCreative,
     introHotTrending,
     introManagerDesk,

@@ -1,17 +1,17 @@
-import 'package:evently/screens/sign_up_screen.dart';
+import 'package:evently/screens/Authentication/forget_password.dart';
 import 'package:flutter/gestures.dart';
-
-import '../common/widget/custom_main_button.dart';
-import '../common/widget/custom_outlined_button.dart';
-
-import '../common/theme/app_colors.dart';
-import '../common/widget/custom_text_form_field.dart';
-import '../gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+
+import '../../common/theme/app_colors.dart';
+import '../../common/widget/custom_main_button.dart';
+import '../../common/widget/custom_outlined_button.dart';
+import '../../common/widget/custom_text_form_field.dart';
+import '../../gen/assets.gen.dart';
+import 'sign_up_screen.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});
-  static const routeName = "/logInScreen";
+  static const routeName = "/LogInScreen";
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,9 @@ class LogInScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).pushNamed(ForgetPassword.routeName);
+                        },
                         child: Text(
                           "Forget Password?",
                           style: TextStyle(
@@ -66,13 +68,7 @@ class LogInScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 16),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: CustomButton(title: 'Login', onPressed: () {}),
-                      ),
-                    ],
-                  ),
+                  CustomButton(title: 'Login', onPressed: () {}),
                   SizedBox(height: 24),
                   Text.rich(
                     TextSpan(
