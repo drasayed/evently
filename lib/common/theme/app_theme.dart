@@ -4,6 +4,9 @@ import 'app_colors.dart';
 
 class AppTheme {
   static ThemeData lightTheme = ThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.mainColor,
+    ),
     scaffoldBackgroundColor: AppColors.lightBGColor,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
     textTheme: _getTextTheme(AppColors.lightTextColor),
@@ -11,6 +14,9 @@ class AppTheme {
     splashColor: AppColors.grey,
   );
   static ThemeData darkTheme = ThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.darkBGColor,
+    ),
     scaffoldBackgroundColor: AppColors.darkBGColor,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
     textTheme: _getTextTheme(AppColors.darkTextColor),

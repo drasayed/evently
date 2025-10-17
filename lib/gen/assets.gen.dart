@@ -33,11 +33,43 @@ class $AssetsIconsGen {
   AssetGenImage get googleIcon =>
       const AssetGenImage('assets/icons/google_icon.png');
 
+  /// File path: assets/icons/heart_selected.svg
+  SvgGenImage get heartSelected =>
+      const SvgGenImage('assets/icons/heart_selected.svg');
+
+  /// File path: assets/icons/heart_unselected.svg
+  SvgGenImage get heartUnselected =>
+      const SvgGenImage('assets/icons/heart_unselected.svg');
+
+  /// File path: assets/icons/home_selected.png
+  AssetGenImage get homeSelected =>
+      const AssetGenImage('assets/icons/home_selected.png');
+
+  /// File path: assets/icons/home_unselected.svg
+  SvgGenImage get homeUnselected =>
+      const SvgGenImage('assets/icons/home_unselected.svg');
+
   /// File path: assets/icons/lock.svg
   SvgGenImage get lock => const SvgGenImage('assets/icons/lock.svg');
 
+  /// File path: assets/icons/map_selected.svg
+  SvgGenImage get mapSelected =>
+      const SvgGenImage('assets/icons/map_selected.svg');
+
+  /// File path: assets/icons/map_unselected.svg
+  SvgGenImage get mapUnselected =>
+      const SvgGenImage('assets/icons/map_unselected.svg');
+
   /// File path: assets/icons/name_icon.svg
   SvgGenImage get nameIcon => const SvgGenImage('assets/icons/name_icon.svg');
+
+  /// File path: assets/icons/profile_selected.svg
+  SvgGenImage get profileSelected =>
+      const SvgGenImage('assets/icons/profile_selected.svg');
+
+  /// File path: assets/icons/profile_unselected.svg
+  SvgGenImage get profileUnselected =>
+      const SvgGenImage('assets/icons/profile_unselected.svg');
 
   /// List of all assets
   List<dynamic> get values => [
@@ -46,21 +78,42 @@ class $AssetsIconsGen {
     enIcon,
     eye,
     googleIcon,
+    heartSelected,
+    heartUnselected,
+    homeSelected,
+    homeUnselected,
     lock,
+    mapSelected,
+    mapUnselected,
     nameIcon,
+    profileSelected,
+    profileUnselected,
   ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/Sport.png
+  AssetGenImage get sport => const AssetGenImage('assets/images/Sport.png');
+
   /// File path: assets/images/app_icon.png
   AssetGenImage get appIcon =>
       const AssetGenImage('assets/images/app_icon.png');
 
+  /// File path: assets/images/birthday.png
+  AssetGenImage get birthday =>
+      const AssetGenImage('assets/images/birthday.png');
+
+  /// File path: assets/images/eating.png
+  AssetGenImage get eating => const AssetGenImage('assets/images/eating.png');
+
   /// File path: assets/images/forget_password.png
   AssetGenImage get forgetPassword =>
       const AssetGenImage('assets/images/forget_password.png');
+
+  /// File path: assets/images/gaming.png
+  AssetGenImage get gaming => const AssetGenImage('assets/images/gaming.png');
 
   /// File path: assets/images/intro_being_creative.png
   AssetGenImage get introBeingCreative =>
@@ -78,14 +131,22 @@ class $AssetsImagesGen {
   AssetGenImage get introSocial =>
       const AssetGenImage('assets/images/intro_social.png');
 
+  /// File path: assets/images/meeting.png
+  AssetGenImage get meeting => const AssetGenImage('assets/images/meeting.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
+    sport,
     appIcon,
+    birthday,
+    eating,
     forgetPassword,
+    gaming,
     introBeingCreative,
     introHotTrending,
     introManagerDesk,
     introSocial,
+    meeting,
   ];
 }
 

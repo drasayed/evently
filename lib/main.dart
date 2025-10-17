@@ -1,6 +1,6 @@
 import 'package:evently/screens/Authentication/forget_password.dart';
+import 'package:evently/screens/home/main_layer_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'common/theme/app_theme.dart';
 import 'screens/Authentication/log_in_screen.dart';
 import 'screens/Authentication/sign_up_screen.dart';
@@ -20,11 +20,12 @@ class MyApp extends StatelessWidget {
       routes: {
         LogInScreen.routeName: (_) => LogInScreen(),
         SignUpScreen.routeName: (_) => SignUpScreen(),
-        ForgetPassword.routeName:(_)=>ForgetPassword()
+        ForgetPassword.routeName:(_)=>ForgetPassword(),
+        MainLayerScreen.routeName:(_)=>MainLayerScreen(),
       },
       title: 'evently',
-      theme: AppTheme.lightTheme,
-      home: LogInScreen(),
+      theme: AppTheme.darkTheme,
+      home: MainLayerScreen(),
     );
   }
 }
