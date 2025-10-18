@@ -1,4 +1,4 @@
-import 'package:evently/screens/Authentication/forget_password.dart';
+import 'forget_password.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 

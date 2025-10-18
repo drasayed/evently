@@ -6,12 +6,14 @@ class AppTheme {
   static ThemeData lightTheme = ThemeData(
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       backgroundColor: AppColors.mainColor,
+      
     ),
     scaffoldBackgroundColor: AppColors.lightBGColor,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainColor),
     textTheme: _getTextTheme(AppColors.lightTextColor),
     hintColor: AppColors.grey,
     splashColor: AppColors.grey,
+    shadowColor: AppColors.lightBGColor
   );
   static ThemeData darkTheme = ThemeData(
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -22,6 +24,7 @@ class AppTheme {
     textTheme: _getTextTheme(AppColors.darkTextColor),
     hintColor: AppColors.darkTextColor,
     splashColor: AppColors.mainColor,
+    shadowColor:AppColors.mainColor
   );
 
   static _getTextTheme(Color textColor) {

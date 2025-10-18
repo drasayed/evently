@@ -1,7 +1,7 @@
-import 'package:evently/common/theme/app_colors.dart';
-import 'package:evently/common/widget/custom_main_button.dart';
-import 'package:evently/common/widget/custom_text_form_field.dart';
-import 'package:evently/gen/assets.gen.dart';
+import '../../common/theme/app_colors.dart';
+import '../../common/widget/custom_main_button.dart';
+import '../../common/widget/custom_text_form_field.dart';
+import '../../gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPassword extends StatelessWidget {
