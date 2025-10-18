@@ -130,11 +130,11 @@ class _FilterViewState extends State<FilterView> {
           label: Row(
             spacing: 8,
             children: [
-              Icon(currentCat.catIcon, color: AppColors.lightBGColor),
+              Icon(currentCat.catIcon, color:isSelected?Theme.of(context).focusColor:AppColors.lightBGColor),
               Text(
                 currentCat.catName,
                 style: TextStyle(
-                  color: AppColors.lightBGColor,
+                  color: isSelected?Theme.of(context).focusColor:AppColors.lightBGColor,
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                 ),
@@ -142,15 +142,22 @@ class _FilterViewState extends State<FilterView> {
             ],
           ),
           selected: isSelected,
+          side: BorderSide(
+            color: isSelected
+                ? Colors.transparent
+                : Theme.of(context).shadowColor,
+          ),
+          selectedColor: Theme.of(context).shadowColor,
           backgroundColor: Theme.of(
             context,
           ).bottomNavigationBarTheme.backgroundColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadiusGeometry.circular(46),
           ),
+          showCheckmark: false,
           onSelected: (value) {
             setState(() {
-              selectedId=index;
+              selectedId = index;
             });
           },
         );
