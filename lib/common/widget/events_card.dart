@@ -18,13 +18,13 @@ class EventsCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(16.r),
       ),
       padding: EdgeInsets.all(8.r),
-      height: 203.h,
+      height: 204.h,
       margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 16.w),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 49.h,
+            height: 55.h,
             width: 50.w,
             decoration: BoxDecoration(
               color: Theme.of(context).scaffoldBackgroundColor,
