@@ -1,10 +1,11 @@
-import 'package:evently/common/theme/app_colors.dart';
-import 'package:evently/gen/assets.gen.dart';
-import 'package:evently/models/category_model.dart';
 import 'package:flutter/material.dart';
 
+import '../../../common/theme/app_colors.dart';
+import '../../../gen/assets.gen.dart';
+import '../../../models/category_model.dart';
+
 class HomeHeader extends StatelessWidget {
-  HomeHeader({super.key});
+  const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -122,49 +123,51 @@ class _FilterViewState extends State<FilterView> {
   @override
   Widget build(BuildContext context) {
     List categories = CategoryModel.categories;
-    return ListView.separated(
-      itemBuilder: (context, index) {
-        CategoryModel currentCat = categories[index];
-        bool isSelected = selectedId == currentCat.CatId;
-        return FilterChip(
-          label: Row(
-            spacing: 8,
-            children: [
-              Icon(currentCat.catIcon, color:isSelected?Theme.of(context).focusColor:AppColors.lightBGColor),
-              Text(
-                currentCat.catName,
-                style: TextStyle(
-                  color: isSelected?Theme.of(context).focusColor:AppColors.lightBGColor,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
+    return Theme(data: Theme.of(context).copyWith(splashColor: Colors.transparent),
+      child: ListView.separated(
+        itemBuilder: (context, index) {
+          CategoryModel currentCat = categories[index];
+          bool isSelected = selectedId == currentCat.CatId;
+          return FilterChip(
+            label: Row(
+              spacing: 8,
+              children: [
+                Icon(currentCat.catIcon, color:isSelected?Theme.of(context).focusColor:AppColors.lightBGColor),
+                Text(
+                  currentCat.catName,
+                  style: TextStyle(
+                    color: isSelected?Theme.of(context).focusColor:AppColors.lightBGColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-              ),
-            ],
-          ),
-          selected: isSelected,
-          side: BorderSide(
-            color: isSelected
-                ? Colors.transparent
-                : Theme.of(context).shadowColor,
-          ),
-          selectedColor: Theme.of(context).shadowColor,
-          backgroundColor: Theme.of(
-            context,
-          ).bottomNavigationBarTheme.backgroundColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadiusGeometry.circular(46),
-          ),
-          showCheckmark: false,
-          onSelected: (value) {
-            setState(() {
-              selectedId = index;
-            });
-          },
-        );
-      },
-      separatorBuilder: (context, index) => SizedBox(width: 10),
-      itemCount: categories.length,
-      scrollDirection: Axis.horizontal,
+              ],
+            ),
+            selected: isSelected,
+            side: BorderSide(
+              color: isSelected
+                  ? Colors.transparent
+                  : Theme.of(context).shadowColor,
+            ),
+            selectedColor: Theme.of(context).shadowColor,
+            backgroundColor: Theme.of(
+              context,
+            ).bottomNavigationBarTheme.backgroundColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(46),
+            ),
+            showCheckmark: false,
+            onSelected: (value) {
+              setState(() {
+                selectedId = index;
+              });
+            },
+          );
+        },
+        separatorBuilder: (context, index) => SizedBox(width: 10),
+        itemCount: categories.length,
+        scrollDirection: Axis.horizontal,
+      ),
     );
   }
 }

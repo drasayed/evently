@@ -1,10 +1,10 @@
-import 'package:evently/screens/home/home_tab/home_tab.dart';
+import 'home_tab/home_tab.dart';
 
 import '../../common/theme/app_colors.dart';
 import '../../gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 class MainLayerScreen extends StatefulWidget {
-   MainLayerScreen({super.key});
+   const MainLayerScreen({super.key});
   static const routeName = '/MainLayerScreen';
   @override
   State<MainLayerScreen> createState() => _MainLayerScreenState();

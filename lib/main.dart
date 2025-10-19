@@ -1,4 +1,3 @@
-import 'package:evently/screens/home/home_tab/home_tab.dart';
 import 'package:flutter/material.dart';
 
 import 'common/theme/app_theme.dart';

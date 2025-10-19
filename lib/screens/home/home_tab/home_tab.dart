@@ -1,5 +1,7 @@
-import 'package:evently/screens/home/home_tab/home_header.dart';
+import 'package:evently/screens/home/home_tab/events_list_view.dart';
 import 'package:flutter/material.dart';
+
+import 'home_header.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -7,7 +9,14 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: HomeHeader(),
+      body: Column(
+        children: [
+          HomeHeader(),
+          EventsListView()
+        ],
+      ),
+      
+      
     );
   }
 }
