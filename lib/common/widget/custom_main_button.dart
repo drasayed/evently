@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../theme/app_colors.dart';
 
@@ -13,7 +14,7 @@ class CustomButton extends StatelessWidget {
       children: [
         Expanded(
           child: SizedBox(
-            height: 56,
+            height: 56.h,
             child: FilledButton(
               onPressed: onPressed,
               style: FilledButton.styleFrom(

@@ -20,12 +20,12 @@ class ForgetPassword extends StatelessWidget {
         foregroundColor: AppColors.mainColor,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(14),
+        padding: const EdgeInsets.all(14).r,
         child: SingleChildScrollView(
           child: Column(
             spacing: 24.h,
             children: [
-              Assets.images.forgetPassword.image(),
+              Assets.images.forgetPassword.image(height: 361.h),
               SizedBox(height: 24.h),
               CustomTextFormField(
                 hintText: 'Email',

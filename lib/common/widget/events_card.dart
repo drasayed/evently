@@ -24,8 +24,8 @@ class EventsCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            height: 49.h,
-            width: 43.w,
+            height: 55.h,
+            width: 50.w,
             decoration: BoxDecoration(
               color: Theme.of(context).scaffoldBackgroundColor,
               borderRadius: BorderRadius.circular(8.r),
