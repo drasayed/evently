@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'home_tab/home_tab.dart';
 
 import '../../common/theme/app_colors.dart';
@@ -31,7 +33,7 @@ class _MainLayerScreenState extends State<MainLayerScreen> {
           backgroundColor: Theme.of(
             context,
           ).bottomNavigationBarTheme.backgroundColor,
-          child: Icon(Icons.add, color: AppColors.lightBGColor, size: 40),
+          child: Icon(Icons.add, color: AppColors.lightBGColor, size: 40.h),
         ),
       ),
       bottomNavigationBar: BottomAppBar(
@@ -52,11 +54,11 @@ clipBehavior:Clip.antiAliasWithSaveLayer,
             unselectedItemColor: AppColors.lightBGColor,
             selectedItemColor: AppColors.lightBGColor,
             unselectedLabelStyle: TextStyle(
-              fontSize: 12,
+              fontSize: 12.sp,
               fontWeight: FontWeight.w600,
             ),
             selectedLabelStyle: TextStyle(
-              fontSize: 12,
+              fontSize: 12.sp,
               fontWeight: FontWeight.w600,
             ),
             items: [

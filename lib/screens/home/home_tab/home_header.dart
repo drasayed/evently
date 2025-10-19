@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../common/theme/app_colors.dart';
 import '../../../gen/assets.gen.dart';
@@ -31,7 +32,7 @@ class HomeHeader extends StatelessWidget {
                       style: TextStyle(
                         color: AppColors.lightBGColor,
                         fontWeight: FontWeight.w400,
-                        fontSize: 14,
+                        fontSize: 14.sp,
                       ),
                     ), //TODO local
                     Text(
@@ -39,10 +40,10 @@ class HomeHeader extends StatelessWidget {
                       style: TextStyle(
                         color: AppColors.lightBGColor,
                         fontWeight: FontWeight.bold,
-                        fontSize: 24,
+                        fontSize: 24.sp,
                       ),
                     ),
-                    SizedBox(height: 11),
+                    SizedBox(height: 8.h),
 
                     Row(
                       children: [
@@ -55,7 +56,7 @@ class HomeHeader extends StatelessWidget {
                           style: TextStyle(
                             color: AppColors.lightBGColor,
                             fontWeight: FontWeight.w500,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                           ),
                         ), //TODO Local
                       ],
@@ -65,8 +66,8 @@ class HomeHeader extends StatelessWidget {
                 Row(
                   children: [
                     SizedBox(
-                      height: 33,
-                      width: 33,
+                      height: 33.h,
+                      width: 33.w,
                       child: IconButton(
                         onPressed: () {},
                         icon: Assets.icons.sun.svg(),
@@ -74,8 +75,8 @@ class HomeHeader extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 33,
-                      width: 33,
+                      height: 33.h,
+                      width: 35.w,
                       child: FilledButton(
                         onPressed: () {},
                         style: FilledButton.styleFrom(
@@ -88,7 +89,7 @@ class HomeHeader extends StatelessWidget {
                         child: Text(
                           'EN',
                           style: TextStyle(
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             fontWeight: FontWeight.bold,
                             color: Theme.of(
                               context,
@@ -101,8 +102,8 @@ class HomeHeader extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 12),
-            SizedBox(height: 48, child: FilterView()),
+            SizedBox(height: 8.h),
+            SizedBox(height: 40.h, child: FilterView()),
           ],
         ),
       ),
@@ -130,14 +131,14 @@ class _FilterViewState extends State<FilterView> {
           bool isSelected = selectedId == currentCat.CatId;
           return FilterChip(
             label: Row(
-              spacing: 8,
+              spacing: 8.w,
               children: [
                 Icon(currentCat.catIcon, color:isSelected?Theme.of(context).focusColor:AppColors.lightBGColor),
                 Text(
                   currentCat.catName,
                   style: TextStyle(
                     color: isSelected?Theme.of(context).focusColor:AppColors.lightBGColor,
-                    fontSize: 16,
+                    fontSize: 16.sp,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -164,7 +165,7 @@ class _FilterViewState extends State<FilterView> {
             },
           );
         },
-        separatorBuilder: (context, index) => SizedBox(width: 10),
+        separatorBuilder: (context, index) => SizedBox(width: 10.w),
         itemCount: categories.length,
         scrollDirection: Axis.horizontal,
       ),

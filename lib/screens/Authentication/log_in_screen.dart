@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'forget_password.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -19,140 +21,138 @@ class LogInScreen extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Transform.scale(
-            scaleY: 0.9,
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Assets.images.appIcon.image(height: 140),
-                  Text(
-                    'Evently',
-                    style: TextStyle(
-                      color: AppColors.mainColor,
-                      fontSize: 36,
-                      fontFamily: "Jockey One",
-                    ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Assets.images.appIcon.image(height: 140.h),
+                Text(
+                  'Evently',
+                  style: TextStyle(
+                    color: AppColors.mainColor,
+                    fontSize: 36.sp,
+                    fontFamily: "Jockey One",
                   ),
-                  SizedBox(height: 24),
-                  CustomTextFormField(
-                    hintText: 'Email',
-                    prefixIcon: Assets.icons.email.svg(),
-                  ), //TODO Local
-                  SizedBox(height: 16),
-                  CustomTextFormField(
-                    hintText: 'Password',
-                    prefixIcon: Assets.icons.lock.svg(),
-                    suffixIcon: Assets.icons.eye.svg(),
-                  ),//TODO Local
-                  SizedBox(height: 8),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.of(context).pushNamed(ForgetPassword.routeName);
-                        },
-                        child: Text(
-                          "Forget Password?",
-                          style: TextStyle(
-                            color: AppColors.mainColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                            fontStyle: FontStyle.italic,
-                            decoration: TextDecoration.underline,
-                            decorationColor: AppColors.mainColor,
-                          ),
-                        ), //TODO Local,
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 16),
-                  CustomButton(title: 'Login', onPressed: () {}),
-                  SizedBox(height: 24),
-                  Text.rich(
-                    TextSpan(
-                      children: [
-                        TextSpan(
-                          text: 'Don’t Have Account ? ',
-                          style: Theme.of(context).textTheme.titleMedium,
-                        ),//TODO Local
-                        TextSpan(
-                          text: 'Create Account',
-                          recognizer:TapGestureRecognizer()..onTap=(){
-                            Navigator.of(context).pushNamed(SignUpScreen.routeName);
-                          },
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                            fontStyle: FontStyle.italic,
-                            color: AppColors.mainColor,
-                            decoration: TextDecoration.underline,
-                            decorationColor: AppColors.mainColor,
-                          ),//TODO Local
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 16),
-                  Row(
-                    spacing: 9,
-                    children: [
-                      Expanded(
-                        child: Divider(color: AppColors.mainColor, indent: 18),
-                      ),
-                      Text(
-                        'Or',
+                ),
+                SizedBox(height: 24.h),
+                CustomTextFormField(
+                  hintText: 'Email',
+                  prefixIcon: Assets.icons.email.svg(),
+                ), //TODO Local
+                SizedBox(height: 16.h),
+                CustomTextFormField(
+                  hintText: 'Password',
+                  prefixIcon: Assets.icons.lock.svg(),
+                  suffixIcon: Assets.icons.eye.svg(),
+                ),//TODO Local
+                SizedBox(height: 8.h),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(ForgetPassword.routeName);
+                      },
+                      child: Text(
+                        "Forget Password?",
                         style: TextStyle(
                           color: AppColors.mainColor,
-                          fontWeight: FontWeight.w400,
-                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16.sp,
+                          fontStyle: FontStyle.italic,
+                          decoration: TextDecoration.underline,
+                          decorationColor: AppColors.mainColor,
                         ),
-                      ),
-                      Expanded(
-                        child: Divider(
+                      ), //TODO Local,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 16.h),
+                CustomButton(title: 'Login', onPressed: () {}),
+                SizedBox(height: 24.h),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Don’t Have Account ? ',
+                        style: Theme.of(context).textTheme.titleMedium,
+                      ),//TODO Local
+                      TextSpan(
+                        text: 'Create Account',
+                        recognizer:TapGestureRecognizer()..onTap=(){
+                          Navigator.of(context).pushNamed(SignUpScreen.routeName);
+                        },
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16.sp,
+                          fontStyle: FontStyle.italic,
                           color: AppColors.mainColor,
-                          endIndent: 18,
-                        ),
+                          decoration: TextDecoration.underline,
+                          decorationColor: AppColors.mainColor,
+                        ),//TODO Local
                       ),
                     ],
                   ),
-                  SizedBox(height: 24),
-                  CustomOutlinedButton(
-                    onPressed: () {},
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      spacing: 10,
-                      children: [
-                        Assets.icons.googleIcon.image(height: 25),
-                        Text(
-                          'Login With Google',
-                          style: TextStyle(
-                            color: AppColors.mainColor,
-                            fontSize: 20,
-                          ),//TODO Local
-                        ),
-                      ],
+                ),
+                SizedBox(height: 16.h),
+                Row(
+                  spacing: 9.w,
+                  children: [
+                    Expanded(
+                      child: Divider(color: AppColors.mainColor, indent: 18.w),
                     ),
-                  ),
-                  SizedBox(height: 24),
-
-                  Transform.scale(
-                    scale: 1.2,
-                    child: Switch(
-                      value: true,
-                      onChanged: (value) {},
-                      activeThumbImage: Assets.icons.enIcon.provider(),
-                      inactiveThumbImage: Assets.icons.arIcon.provider(),
-                      activeTrackColor: AppColors.lightBGColor,
-                      inactiveTrackColor: AppColors.lightBGColor,
-                      trackOutlineColor: WidgetStateProperty.all(
-                        AppColors.mainColor,
+                    Text(
+                      'Or',
+                      style: TextStyle(
+                        color: AppColors.mainColor,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 16.sp,
                       ),
                     ),
+                    Expanded(
+                      child: Divider(
+                        color: AppColors.mainColor,
+                        endIndent: 18.w,
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 24.h),
+                CustomOutlinedButton(
+                  onPressed: () {},
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    spacing: 10.w,
+                    children: [
+                      Assets.icons.googleIcon.image(height: 25),
+                      SizedBox(width: 10.w),
+                      Text(
+                        'Login With Google',
+                        style: TextStyle(
+                          color: AppColors.mainColor,
+                          fontSize: 20.sp,
+                        ),//TODO Local
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+                SizedBox(height: 24.h),
+          
+                Transform.scale(
+                  scale: 1.2,
+                  child: Switch(
+                    value: true,
+                    onChanged: (value) {},
+                    activeThumbImage: Assets.icons.enIcon.provider(),
+                    inactiveThumbImage: Assets.icons.arIcon.provider(),
+                    activeTrackColor: AppColors.lightBGColor,
+                    inactiveTrackColor: AppColors.lightBGColor,
+                    trackOutlineColor: WidgetStateProperty.all(
+                      AppColors.mainColor,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

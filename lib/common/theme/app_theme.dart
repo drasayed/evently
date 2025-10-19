@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'app_colors.dart';
 
@@ -34,37 +35,37 @@ class AppTheme {
     return TextTheme(
       labelSmall: TextStyle(
         color: textColor,
-        fontSize: 10,
+        fontSize: 10.sp,
         fontWeight: FontWeight.w400,
       ),
       labelLarge: TextStyle(
         color: textColor,
-        fontSize: 14,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w400,
       ),
       bodySmall: TextStyle(
         color: textColor,
-        fontSize: 12,
+        fontSize: 12.sp,
         fontWeight: FontWeight.w400,
       ),
       bodyMedium: TextStyle(
         color: textColor,
-        fontSize: 14,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w400,
       ),
       bodyLarge: TextStyle(
         color: textColor,
-        fontSize: 16,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w400,
       ),
       titleSmall: TextStyle(
         color: textColor,
-        fontSize: 14,
+        fontSize: 14.sp,
         fontWeight: FontWeight.w500,
       ),
       titleMedium: TextStyle(
         color: textColor,
-        fontSize: 16,
+        fontSize: 16.sp,
         fontWeight: FontWeight.w500,
       ),
     );

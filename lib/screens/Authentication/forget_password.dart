@@ -1,3 +1,5 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../common/theme/app_colors.dart';
 import '../../common/widget/custom_main_button.dart';
 import '../../common/widget/custom_text_form_field.dart';
@@ -21,16 +23,18 @@ class ForgetPassword extends StatelessWidget {
         padding: const EdgeInsets.all(14),
         child: SingleChildScrollView(
           child: Column(
-            spacing: 24,
+            spacing: 24.h,
             children: [
               Assets.images.forgetPassword.image(),
+              SizedBox(height: 24.h),
               CustomTextFormField(
                 hintText: 'Email',
                 prefixIcon: Assets.icons.email.svg(),
               ),
             CustomButton(title: 'Reset Password',onPressed: () {
               
-            },)
+            },),
+              
             ],
           ),
         ),

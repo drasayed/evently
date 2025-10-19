@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'common/theme/app_theme.dart';
 import 'screens/Authentication/forget_password.dart';
@@ -16,17 +17,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {
-        LogInScreen.routeName: (_) => LogInScreen(),
-        SignUpScreen.routeName: (_) => SignUpScreen(),
-        ForgetPassword.routeName: (_) => ForgetPassword(),
-        MainLayerScreen.routeName: (_) => MainLayerScreen(),
-      },
-      title: 'evently',
-      theme: AppTheme.lightTheme,
-      home: MainLayerScreen(),
+    return ScreenUtilInit(
+      builder: (context, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          routes: {
+            LogInScreen.routeName: (_) => LogInScreen(),
+            SignUpScreen.routeName: (_) => SignUpScreen(),
+            ForgetPassword.routeName: (_) => ForgetPassword(),
+            MainLayerScreen.routeName: (_) => MainLayerScreen(),
+          },
+          title: 'evently',
+          theme: AppTheme.lightTheme,
+          home: MainLayerScreen(),
+        );
+      }
     );
   }
 }
