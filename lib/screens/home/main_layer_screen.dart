@@ -1,3 +1,4 @@
+import 'package:evently/screens/home/fav_tab/fav_tab_view.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'home_tab/home_tab.dart';
@@ -14,7 +15,7 @@ class MainLayerScreen extends StatefulWidget {
 
 class _MainLayerScreenState extends State<MainLayerScreen> {
   int currentIndex=0;
-  List<Widget> tabs = [HomeTab(),Container(decoration: BoxDecoration(color: AppColors.errorColor),),Container(decoration: BoxDecoration(color: AppColors.grey)),Container(decoration: BoxDecoration(color: AppColors.mainColor))];
+  List<Widget> tabs = [HomeTab(),Container(decoration: BoxDecoration(color: AppColors.errorColor),),FavTabView(),Container(decoration: BoxDecoration(color: AppColors.mainColor))];
 
   @override
   Widget build(BuildContext context) {

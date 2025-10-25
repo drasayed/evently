@@ -8,12 +8,21 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText,
     this.prefixIcon,
     this.suffixIcon,
-    this.validator
+    this.validator,this.labelStyle, this.hintStyle, this.iconColor, this.suffixIconColor, this.prefixIconColor
   });
   final String? hintText;
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final String? Function(String?)? validator;
+  final TextStyle? labelStyle;
+  final TextStyle? hintStyle;
+  final Color? iconColor;
+  final Color? suffixIconColor;
+  final Color? prefixIconColor;
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +30,11 @@ class CustomTextFormField extends StatelessWidget {
       validator: validator,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: TextStyle(
+        hintStyle:hintStyle?? TextStyle(
           color: Theme.of(context).hintColor,
           fontWeight: FontWeight.w400,
         ),
-        labelStyle: TextStyle(color: Theme.of(context).hintColor,
+        labelStyle: labelStyle?? TextStyle(color: Theme.of(context).hintColor,
           fontWeight: FontWeight.w500,),
         prefixIcon: Padding(
           padding: const EdgeInsets.all(16.0),
@@ -35,9 +44,9 @@ class CustomTextFormField extends StatelessWidget {
           padding: const EdgeInsets.all(16.0),
           child: suffixIcon,
         ),
-        iconColor: Theme.of(context).hintColor,
-        prefixIconColor: Theme.of(context).hintColor,
-        suffixIconColor: Theme.of(context).hintColor,
+        iconColor:iconColor?? Theme.of(context).hintColor,
+        prefixIconColor:prefixIconColor?? Theme.of(context).hintColor,
+        suffixIconColor:suffixIconColor?? Theme.of(context).hintColor,
         contentPadding: EdgeInsets.all(16),
         errorBorder: _getBorder(AppColors.errorColor),
         focusedBorder: _getBorder(Theme.of(context).splashColor),

@@ -103,7 +103,7 @@ class HomeHeader extends StatelessWidget {
               ],
             ),
             SizedBox(height: 8.h),
-            SizedBox(height: 40.h, child: FilterView()),
+            SizedBox(height: 40.h, child: CategoryView()),
           ],
         ),
       ),
@@ -111,15 +111,15 @@ class HomeHeader extends StatelessWidget {
   }
 }
 
-class FilterView extends StatefulWidget {
-  const FilterView({super.key});
+class CategoryView extends StatefulWidget {
+  const CategoryView({super.key});
 
   @override
-  State<FilterView> createState() => _FilterViewState();
+  State<CategoryView> createState() => _CategoryViewState();
 }
 
-class _FilterViewState extends State<FilterView> {
-  int selectedId = 0;
+class _CategoryViewState extends State<CategoryView> {
+  static int selectedId = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -128,7 +128,7 @@ class _FilterViewState extends State<FilterView> {
       child: ListView.separated(
         itemBuilder: (context, index) {
           CategoryModel currentCat = categories[index];
-          bool isSelected = selectedId == currentCat.CatId;
+          bool isSelected = selectedId == currentCat.catId;
           return FilterChip(
             label: Row(
               spacing: 8.w,
